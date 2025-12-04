@@ -1,0 +1,13 @@
+import numpy as np
+m1 = np.array([[1,3,2],
+               [4,1,6]])
+m2 = np.array([[2,1,3],
+               [0,5,2]])
+penjumlahan = m1 + m2
+print("Penjumlahan Matriks:\n", penjumlahan)
+pengurangan = m1 - m2
+print("Pengurangan Matriks:\n", pengurangan)
+m1_transpose = m1.T
+print("Transpose Matriks:\n", m1_transpose)
+perkalian = np.dot(m1,m2.T)
+print("Perkalian Matriks:\n", perkalian)
