@@ -1,0 +1,9 @@
+import numpy as np
+A = np.array([
+    [0,2,4,0],
+    [2,0,0,3],
+    [4,0,0,1],
+    [0,3,1,0]
+])
+degree = np.sum(A > 0, axis=1)
+print(degree)
