@@ -31,4 +31,3 @@ while len(visited) < len(nodes):
         break
 print("Lintasan", "->".join(path))
 print("Jarak total:", total)
-print
