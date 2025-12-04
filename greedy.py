@@ -1,0 +1,26 @@
+import numpy as np
+A = np.array([
+    [0,2,4,0],
+    [2,0,0,3],
+    [4,0,0,1],
+    [0,3,1,0]
+])
+nodes = ['A','B','C','D']
+visited = [0]
+path = ['A']
+total = 0
+while len(visited) < len(nodes):
+    curr = visited[-1]
+    min_weight = float('inf')
+    next_node = None
+    for j in range(len(nodes)):
+        if A[curr][j] != 0 and j not in visited and A[curr][j] < min_weight:
+            min_weight = A[curr][j]
+            next_node = j
+    if next_node is None:
+        break
+    visited.append(next_node)
+    path.append(nodes[next_node])
+    total += min_weight
+print("Lintasan:", "->".join(path))
+print("Jarak total:", total)
